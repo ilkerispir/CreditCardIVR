@@ -41,7 +41,7 @@ app.post('/login', (req, res) => {
         if(json.login){
             console.log(json.email);
             res.cookie('aloTechMail', req.body.inputEmail);
-            res.cookie('aloTechSession', json.session);
+            res.cookie('aloTechSession', "ahRzfm11c3RlcmktaGl6bWV0bGVyaXIfCxISVGVuYW50QXBwbGljYXRpb25zGICA6PSC7r4KDKIBIXNtYXJ0a29udGFrLm11c3RlcmloaXptZXRsZXJpLmNvbQ");
             res.redirect('payment');
         }else{
             res.render('login');
