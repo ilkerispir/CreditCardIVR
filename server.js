@@ -23,7 +23,8 @@ app.get('/login', (req, res) =>{
         if(json.login){
             res.redirect('payment');
         }else{
-            res.render('login');
+            var message = "";
+            res.render('login', {message: message});
         }
     });
 });
@@ -44,7 +45,8 @@ app.post('/login', (req, res) => {
             res.cookie('aloTechSession', "ahRzfm11c3RlcmktaGl6bWV0bGVyaXIfCxISVGVuYW50QXBwbGljYXRpb25zGICA6PSC7r4KDKIBIXNtYXJ0a29udGFrLm11c3RlcmloaXptZXRsZXJpLmNvbQ");
             res.redirect('payment');
         }else{
-            res.render('login');
+            var message = "Kullancı adı veya Şifre Hatalı";
+            res.render('login', {message:message});
         }
     });
 });
