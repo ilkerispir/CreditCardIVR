@@ -14,7 +14,6 @@ app.use(express.static(__dirname + '/public'));
 app.use(expressLayouts);
 app.use(cookieParser());
 
-
 app.get('/login', (req, res) =>{ 
     let url = "https://smartkontak.musterihizmetleri.com/api/?function=ping&session=" + req.cookies.aloTechSession;
     let settings = { method: "Get" };
